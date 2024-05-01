@@ -1,4 +1,4 @@
-# @tailwindcss/forms
+# tlwind-forms
 
 A plugin that provides a basic reset for form styles that makes form elements easy to override with utilities.
 
@@ -7,7 +7,7 @@ A plugin that provides a basic reset for form styles that makes form elements ea
 Install the plugin from npm:
 
 ```sh
-npm install -D @tailwindcss/forms
+npm install -D tlwind-forms
 ```
 
 Then add the plugin to your `tailwind.config.js` file:
@@ -19,7 +19,7 @@ module.exports = {
     // ...
   },
   plugins: [
-    require('@tailwindcss/forms'),
+    require('tlwind-forms'),
     // ...
   ],
 }
@@ -70,7 +70,7 @@ More customization examples and best practices coming soon.
 In addition to the global styles, we also generate a set of corresponding classes which can be used to explicitly apply the form styles to an element. This can be useful in situations where you need to make a non-form element, such as a `<div>`, look like a form element.
 
 ```html
-<input type="email" class="form-input px-4 py-3 rounded-full">
+<input type="email" class="form-input px-4 py-3 rounded-full" />
 
 <select class="form-select px-4 py-3 rounded-full">
   <!-- ... -->
@@ -110,7 +110,7 @@ If generating both the global (base) styles and classes doesn't work well with y
 ```js
 // tailwind.config.js
 plugins: [
-  require("@tailwindcss/forms")({
+  require("tlwind-forms")({
     strategy: 'base', // only generate global styles
     strategy: 'class', // only generate classes
   }),
